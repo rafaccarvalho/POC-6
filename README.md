@@ -26,7 +26,7 @@ src/
     ├── 📂BotaoCompra.js
     ├── 📂DetalhesFilme.js
     ├── 📂GradeAssentos.js
-    └── 📂TrocaTema
+    └── 📂TrocaTema.js
 ```
 
 3-) Javascript
@@ -382,16 +382,19 @@ Neste código é definido o componente TrocaTema, que permite ao usuário altern
 
 4-) CSS
 
-- Os estilos globais são ótimos para criar regras que valem para toda a aplicação, garantindo que todas as páginas tenham uma aparência uniforme.
+- Crie a pasta src/components e, dentro dela, crie os seguintes arquivos:
+```
+src/
+└── components/
+    ├── 📂BotaoCompra.js
+    ├── 📂DetalhesFilme.js
+    ├── 📂GradeAssentos.js
+    └── 📂TrocaTema.js
+```
 
 - Dentro do arquivo src/app/global.css acrescente o seguinte código:
 ```css
-html,body{
-  background-color:#e4ede9;
-  padding: 0;
-  margin: 0;
-  color:#2b2b2a;
-}
+
 ```
 Neste código as mudanças no CSS vão alterar a cor do fundo, tirar as margens ou espaços extras ao redor do conteúdo, e alterar a cor do texto. Essas mudanças serão aplicadas em toda a aparência do projeto.
 
@@ -399,65 +402,13 @@ Neste código as mudanças no CSS vão alterar a cor do fundo, tirar as margens 
 
 - Dentro do arquivo src/components/Cards.module.css acrescente o seguinte código:
 ```css
-.cards{
-    text-align: justify;
-}
 
-.cards :hover{
-    background-color: #dbaf4f;
-}
-
-.cardB{
-    display: flex;
-    margin: 40px;
-    width: 60%;
-    background-color: #ebcc8a;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    padding: 10px;
-}
-
-.cardP{
-    display: flex;
-    margin: 40px;
-    width: 60%;
-    background-color: #ebcc8a;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    padding: 10px;    
-}
-
-.cardP > Image{
-    display: flex;
-}
-
-.textos{
-    margin-left: 10px;
-    display:flex;
-    flex-direction: column;
-}
 ```
 Neste código as classes .cards, .cardB e .cardP controlam a aparência e o layout. O efeito de hover muda a cor de fundo dos cartões e a classe .textos organiza o conteúdo textual em uma coluna. Essas mudanças serão aplicadas apenas na aparência dos cards da página.
 
 - Dentro do arquivo src/components/Header.module.css acrescente o seguinte código:
 ```css
-.titulos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    background-color: #f5f39f;
-    font-size: 15pt;
-}
 
-.titulo{
-    padding: 10px;
-}
-
-.receita{
-    text-align: center;
-    font-size: 30pt;
-}
 ```
 Neste código a classe .titulos usa flexbox para organizar seus elementos em uma linha, a classe .titulo adiciona um espaçamento ao redor dos elementos e a classe .receita centraliza o texto e aumenta o tamanho da fonte. Essas mudanças serão aplicadas apenas na aparência da header da página.
 
