@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,7 +11,6 @@ export default function Home() {
   const [assentosSelecionados, setAssentosSelecionados] = useState([]);
   const [temaAtual, setTemaAtual] = useState("light");
 
-  // Verifica a preferência de tema do sistema (light ou dark)
   useEffect(() => {
     const temaPreferido = window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
@@ -64,7 +64,7 @@ export default function Home() {
             assentosSelecionados={assentosSelecionados}
             selecionarAssento={selecionarAssento}
             corSelecionado={temas[temaAtual].seatSelected}
-            temaAtual={temaAtual} // Passando o tema atual para o GradeAssentos
+            temaAtual={temaAtual}
           />
         </div>
 
