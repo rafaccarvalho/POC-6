@@ -509,11 +509,12 @@ Neste código é definido dois temas de cores para a página: claro (light) e es
 
 ## 5-) Execução
 
-- Para executar a aplicação digite os seguintes comandos no terminal:
+- Para executar a aplicação digite o seguinte comando no terminal:
 ```
-npm run build
-npm start
+npm run dev
 ```
+
+- Por fim, acesse o link fornecido.
 
 ## 6-) Conclusão
 
