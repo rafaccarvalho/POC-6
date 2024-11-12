@@ -1,8 +1,6 @@
-/* src/styles/globals.css */
-
 
 html, body {
-  height: 100%; /* Garante que a altura do body ocupe toda a tela */
+  height: 100%; 
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -12,12 +10,11 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilo específico para o texto */
 .fonte {
-  font-family: sans-serif;  /* Aplica a fonte ao texto */
-  font-weight: 100; /* Usa o peso mais fino da fonte */
-  font-size: 18px;  /* Tamanho do texto */
-  line-height: 1.6; /* Espaçamento entre as linhas */
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.6; 
 }
 
 .horario{
@@ -25,9 +22,8 @@ html, body {
   font-size: 28px;
 }
 
-/* O conteúdo principal deve ocupar toda a tela */
 div {
-  min-height: 100%; /* Garante que o conteúdo ocupe a altura da tela */
+  min-height: 100%; 
   box-sizing: border-box;
 }
 
@@ -42,12 +38,10 @@ button {
 }
 
 @media (max-width: 1024px) {
-  /* Esconde a sinopse, data e direção no modo mobile */
   .hide-on-mobile {
     display: none;
   }
 
-  /* Centraliza a grade de assentos no modo mobile */
   .center-seats {
     display: flex;
     justify-content: center;

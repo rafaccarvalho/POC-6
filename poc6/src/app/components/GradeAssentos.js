@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { temas } from "/styles/temas"; // Ajuste o caminho para o arquivo temas.js
+import { temas } from "/styles/temas"; 
 
+{/*Grade de assentos*/}
 export default function GradeAssentos({ assentosSelecionados, selecionarAssento, corSelecionado, temaAtual }) {
   const assentos = Array.from({ length: 64 }, (_, index) => {
     const indisponiveis = [1, 2, 3, 4, 5, 8, 31, 32, 33, 44, 48, 50, 53];
-    const inexistentes = [57, 58, 63, 64]; // Assentos inexistentes
+    const inexistentes = [57, 58, 63, 64];
     
     return {
       numero: index + 1,
@@ -29,19 +30,19 @@ export default function GradeAssentos({ assentosSelecionados, selecionarAssento,
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1024); // Define desktop se largura >= 1024px
+      setIsDesktop(window.innerWidth >= 1024);
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Verifica o tamanho da tela ao carregar
+    handleResize();
 
-    return () => window.removeEventListener("resize", handleResize); // Limpa o listener
+    return () => window.removeEventListener("resize", handleResize); 
   }, []);
 
   return (
     <div
       style={{
-        marginLeft: isDesktop ? "300px" : "0", // Aplica margin-left no desktop
+        marginLeft: isDesktop ? "300px" : "0", 
       }}
     >
       {renderizarAssentos().map((linha, index) => (
@@ -50,7 +51,7 @@ export default function GradeAssentos({ assentosSelecionados, selecionarAssento,
             <button
               key={assento.numero}
               onClick={() => selecionarAssento(assento.numero)}
-              disabled={!assento.indisponivel}
+              disabled={!assento.indisponivel }
               style={{
                 width: "30px",
                 height: "30px",
@@ -70,6 +71,7 @@ export default function GradeAssentos({ assentosSelecionados, selecionarAssento,
         </div>
       ))}
 
+      {/*Tela do cinema*/}
       <div
         style={{
           width: "100%",
@@ -94,6 +96,7 @@ export default function GradeAssentos({ assentosSelecionados, selecionarAssento,
         </span>
       </div>
 
+      {/*Ìcone indicando assentos livres*/}
       <div style={{ display: "flex", gap: "30px", marginTop: "20px",}}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <div
@@ -110,6 +113,7 @@ export default function GradeAssentos({ assentosSelecionados, selecionarAssento,
           </span>
         </div>
 
+      {/*Ìcone indicando assentos selecionados*/}
         <div style={{ display: "flex" }}>
           <div
             style={{
@@ -125,6 +129,7 @@ export default function GradeAssentos({ assentosSelecionados, selecionarAssento,
           </span>
         </div>
 
+      {/*Ìcone indicando assentos indisponiveis*/}
         <div style={{ display: "flex", alignItems: "center" }}>
           <div
             style={{

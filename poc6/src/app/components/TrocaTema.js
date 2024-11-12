@@ -1,4 +1,3 @@
-// src/components/TrocaTema.js
 "use client";
 import { useState, useEffect } from "react";
 import { temas } from "/styles/temas";

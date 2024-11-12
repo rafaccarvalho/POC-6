@@ -11,12 +11,12 @@ export default function BotaoCompra({ valorTotal, temaAtual }) {
     <button
       onClick={handleClick}
       style={{
-        backgroundColor: temas[temaAtual].botaoCompra, // Cor do botão conforme o tema
-        color: temas[temaAtual].botaoCompraTexto, // Cor do texto do botão conforme o tema
+        backgroundColor: temas[temaAtual].botaoCompra,
+        color: temas[temaAtual].botaoCompraTexto, 
         position: "fixed",
         bottom: "20px",
         left: "50%",
-        transform: "translateX(-50%)", // Centraliza horizontalmente
+        transform: "translateX(-50%)",
         padding: "10px 110px",
         fontSize: "15px",
         border: "none",

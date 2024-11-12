@@ -1,4 +1,3 @@
-// src/components/DetalhesFilme.js
 "use client";
 
 export default function DetalhesFilme() {
