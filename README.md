@@ -29,7 +29,9 @@ src/
     └── 📂TrocaTema.js
 ```
 
-3-) Javascript
+3-) Componentes
+
+- Cada componente pode ser responsável por exibir uma parte específica da interface, e pode gerenciar seu próprio estado e lógica.
 
 - Dentro do arquivo src/page.js, acrescente o seguinte código:
 ```javascript
@@ -380,37 +382,130 @@ export default function TrocaTema() {
 ```
 Neste código é definido o componente TrocaTema, que permite ao usuário alternar entre os temas claro e escuro. Quando o tema é alterado, o useEffect aplica as cores de fundo e de texto ao documento usando variáveis CSS (--background-color e --text-color), definidas conforme o tema escolhido no arquivo temas.js.
 
-4-) CSS
-
-- Crie a pasta src/components e, dentro dela, crie os seguintes arquivos:
-```
-src/
-└── components/
-    ├── 📂BotaoCompra.js
-    ├── 📂DetalhesFilme.js
-    ├── 📂GradeAssentos.js
-    └── 📂TrocaTema.js
-```
-
-- Dentro do arquivo src/app/global.css acrescente o seguinte código:
-```css
-
-```
-Neste código as mudanças no CSS vão alterar a cor do fundo, tirar as margens ou espaços extras ao redor do conteúdo, e alterar a cor do texto. Essas mudanças serão aplicadas em toda a aparência do projeto.
+4-) Estilo
 
 - Os módulos de CSS ajudam a isolar estilos, garantindo que os componentes sejam estilizados de forma independente.
 
-- Dentro do arquivo src/components/Cards.module.css acrescente o seguinte código:
+- Crie a pasta styles e dentro dela coloque o arquivo globals.css e crie um arquivo chamado temas.js:
+```
+styles/
+    ├── 📂globals.css
+    └── 📂temas.js
+```
+
+- Dentro do arquivo styles/globals.css acrescente o seguinte código:
 ```css
 
-```
-Neste código as classes .cards, .cardB e .cardP controlam a aparência e o layout. O efeito de hover muda a cor de fundo dos cartões e a classe .textos organiza o conteúdo textual em uma coluna. Essas mudanças serão aplicadas apenas na aparência dos cards da página.
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-- Dentro do arquivo src/components/Header.module.css acrescente o seguinte código:
+.fonte {
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.horario{
+  text-align: center;
+  font-size: 28px;
+}
+
+div {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .center-seats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+```
+Neste código é definido estilos globais para a página, incluindo fontes, cores e layouts responsivos. Ele ajusta a aparência do corpo, botões e textos, e utiliza uma media query para centralizar os assentos e ocultar elementos em dispositivos móveis.
+
+- Dentro do arquivo styles/temas.js acrescente o seguinte código:
 ```css
 
+export const temas = {
+  /*Cores do tema claro*/
+  light: {
+    background: "#F0F0F0",
+    color: "#1A1A24",       
+    seatSelected: "#DB3D2E",  
+    seatAvailable: "#1A1A24", 
+    background: "#F0F0F0", 
+    color: "#1A1A24",
+    seatSelected: "#DB3D2E",  
+    seatAvailable: "#1A1A24",  
+    seatUnavailable: "#BABABA",
+    seatInexistente: "#F0F0F0",
+    seatInexistente: "#F0F0F0",
+    corTela: "#333",
+    screenBackground: "#BABABA",
+    ballFree: "#1A1A24",
+    ballSelected: "#DB3D2E",
+    ballFree: "#1A1A24",
+    ballSelected: "#DB3D2E", 
+    ballOccupied: "#1A1A24",
+    botaoCompra: "#DB3D2E",
+    botaoCompra: "#DB3D2E", 
+    botaoCompraTexto: "#F0F0F0",
+  },
+
+  /*Cores do tema escuro*/
+  dark: {
+    background: "#1A1A24",  
+    color: "#F0F0F0",       
+    seatSelected: "#CD4A3E",   
+    seatAvailable: "#F0F0F0", 
+    background: "#1A1A24",
+    color: "#F0F0F0",
+    seatSelected: "#CD4A3E",
+    seatAvailable: "#F0F0F0",
+    seatUnavailable: "#505050",
+    seatInexistente: "#1A1A24", 
+    seatInexistente: "#1A1A24",
+    corTela: "#F0F0F0",
+    screenBackground: "#505050",
+    ballFree: "#F0F0F0",
+    ballSelected: "#CD4A3E",
+    ballFree: "#F0F0F0",
+    ballSelected: "#CD4A3E",
+    ballOccupied: "#505050",
+    botaoCompra: "#CD4A3E", 
+    botaoCompra: "#CD4A3E",
+    botaoCompraTexto: "#F0F0F0",
+  },
+};
 ```
-Neste código a classe .titulos usa flexbox para organizar seus elementos em uma linha, a classe .titulo adiciona um espaçamento ao redor dos elementos e a classe .receita centraliza o texto e aumenta o tamanho da fonte. Essas mudanças serão aplicadas apenas na aparência da header da página.
+Neste código é definido dois temas de cores para a página: claro (light) e escuro (dark). Cada tema especifica cores para diferentes elementos da interface, como o fundo da página, texto, assentos e outros. 
 
 5-) Execução
 
@@ -422,4 +517,4 @@ npm start
 
 6-) Conclusão
 
-- Em resumo, a Prova de Conceito 5 nos permitiu aplicar o que aprendemos sobre React em aula ao longo desse projeto.
+- Em resumo, a Prova de Conceito 6 nos permitiu aplicar o que aprendemos sobre React em aula ao longo desse projeto.
