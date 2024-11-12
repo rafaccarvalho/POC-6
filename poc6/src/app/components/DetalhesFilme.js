@@ -3,10 +3,8 @@
 
 export default function DetalhesFilme() {
   return (
-    <div>
-      <h1>A Forja</h1>
-      <p>16:40</p>
-      <h3>Sinopse do filme</h3>
+    <div className="fonte">
+      <strong>Sinopse do filme</strong>
       <p>
         Um ano depois de encerrar o ensino médio, o jovem Isaías Wright não tem
         planos para o futuro e é desafiado por sua mãe solo e um empresário de
@@ -15,11 +13,15 @@ export default function DetalhesFilme() {
         guerreira de orações, Dona Clara, e começa a descobrir o propósito de
         Deus para sua vida.
       </p>
+      <br></br>
+      <strong>Data de lançamento</strong>
       <p>
-        <strong>Data de lançamento:</strong> 26 de setembro de 2024 (Brasil)
+        26 de setembro de 2024 (Brasil)
       </p>
+      <br></br>
+      <strong>Direção</strong>
       <p>
-        <strong>Direção:</strong> Alex Kendrick
+        Alex Kendrick
       </p>
     </div>
   );
