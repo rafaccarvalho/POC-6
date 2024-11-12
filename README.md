@@ -21,10 +21,12 @@ npm run dev
 
 - Crie a pasta src/components e, dentro dela, crie os seguintes arquivos:
 ```
-📂BotaoCompra.js
-📂DetalhesFilme.js
-📂GradeAssentos.js
-📂TrocaTema
+src/
+└── components/
+    ├── 📂BotaoCompra.js
+    ├── 📂DetalhesFilme.js
+    ├── 📂GradeAssentos.js
+    └── 📂TrocaTema
 ```
 
 3-) Javascript
