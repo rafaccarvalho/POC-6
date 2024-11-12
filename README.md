@@ -2,7 +2,7 @@
 
 A seguir, apresentamos o passo a passo de como foi elaborada a Prova de Conceito 6 do nosso grupo.
 
-1-) Criação do projeto
+## 1-) Criação do projeto
 
 - use o seguinte comando no terminal para criar um novo projeto Next.js:
 ```
@@ -15,7 +15,7 @@ cd nome-do-projeto
 npm run dev
 ```
 
-2-) Criação de componentes
+## 2-) Criação de componentes
 
 - No Next.js 14, todos os componentes são definidos como funções usando JavaScript ou TypeScript. Esses componentes são a base da interface de usuário no React, permitindo que você divida sua aplicação em partes menores e reutilizáveis.
 
@@ -29,7 +29,7 @@ src/
     └── 📂TrocaTema.js
 ```
 
-3-) Componentes
+## 3-) Componentes
 
 - Cada componente pode ser responsável por exibir uma parte específica da interface, e pode gerenciar seu próprio estado e lógica.
 
@@ -382,7 +382,7 @@ export default function TrocaTema() {
 ```
 Neste código é definido o componente TrocaTema, que permite ao usuário alternar entre os temas claro e escuro. Quando o tema é alterado, o useEffect aplica as cores de fundo e de texto ao documento usando variáveis CSS (--background-color e --text-color), definidas conforme o tema escolhido no arquivo temas.js.
 
-4-) Estilo
+## 4-) Estilo
 
 - Os módulos de CSS ajudam a isolar estilos, garantindo que os componentes sejam estilizados de forma independente.
 
@@ -507,7 +507,7 @@ export const temas = {
 ```
 Neste código é definido dois temas de cores para a página: claro (light) e escuro (dark). Cada tema especifica cores para diferentes elementos da interface, como o fundo da página, texto, assentos e outros. 
 
-5-) Execução
+## 5-) Execução
 
 - Para executar a aplicação digite os seguintes comandos no terminal:
 ```
@@ -515,6 +515,6 @@ npm run build
 npm start
 ```
 
-6-) Conclusão
+## 6-) Conclusão
 
 - Em resumo, a Prova de Conceito 6 nos permitiu aplicar o que aprendemos sobre React em aula ao longo desse projeto.
